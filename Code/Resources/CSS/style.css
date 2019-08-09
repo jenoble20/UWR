@@ -34,7 +34,7 @@ aside{
 /***LANDING PAGE STYLING***/
 
 
-aside.landing{
+aside{
     
     display: flex;
     flex-direction: column;
@@ -43,16 +43,16 @@ aside.landing{
     background-color: var(--aside-background);
 }
 
-aside h2.landing{
+aside h2{
     color: var(--grey-text);
 }
 
-nav.landing{
+nav{
     display: flex;
     flex-direction: column;
 }
 
-nav button.landing{
+nav button{
     margin: 2rem 0;
     line-height: 3rem;
     background: none;
