@@ -32,13 +32,7 @@ $(document).ready(function(){
 
     //Navigates to the About Us section of the site
     function transitionAside(el){
-        $(".menu-item").not(el).toggleClass(" not-selected ");
-        el.classList.add("selected");
-        el.classList.remove("hovered");
-        el.disabled = true;
-
-        $("nav").append("<button id='back'>Back</button>");
-        
+        //stub
     }
 
     /** createAside() & createMain() **
@@ -59,8 +53,6 @@ $(document).ready(function(){
         switch (selector){
             
             case 0:
-             // $("nav").append('<button id="about" class="menu-item">ABOUT US</button><button id="donate" class="menu-item">DONATE NOW</button><button id="contact" class="menu-item">CONTACT US</button><button id="gallery" class="menu-item">PHOTO GALLERY</button>');
-             // $("main").append('<div><h1>Urban Wildlife Rehabilitation</h1></div>');
                 break;
             case 1:
                 break;
@@ -71,13 +63,8 @@ $(document).ready(function(){
             case 4:
                 break;
             case 5:
-
                 break;
             default:
-                $("nav").clear();
-                $("main").clear();
-                $("nav").append('<button id="about" class="menu-item">ABOUT US</button><button id="donate" class="menu-item">DONATE NOW</button><button id="contact" class="menu-item">CONTACT US</button><button id="gallery" class="menu-item">PHOTO GALLERY</button>');
-                $("main").append('<div><h1>Urban Wildlife Rehabilitation</h1></div>');
                 break;
         }
     }
