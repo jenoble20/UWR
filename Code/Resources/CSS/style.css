@@ -1,0 +1,110 @@
+:root{
+    --primary: #FF850A;
+    --site-border: #CC6A08;
+    --main-background: #0F1229;
+    --aside-background: #FFFFFF;
+    --white-text: #FFFFFF;
+    --grey-text: #707070;
+    --faded-text: #CCCCCC;
+}
+
+html{
+    font-size: 16px;
+}
+
+body{
+    background-color: var(--site-border);
+}
+
+container{
+    display: grid;
+    grid-template-areas:
+        "aside main main"
+        "aside main main"
+        "aside main main";
+    height: calc(100vh - 16px);
+}
+
+aside{
+    grid-area: aside;
+    grid-column-start: 1;
+}
+
+
+/***LANDING PAGE STYLING***/
+
+
+aside.landing{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--aside-background);
+}
+
+aside h2.landing{
+    color: var(--grey-text);
+}
+
+nav.landing{
+    display: flex;
+    flex-direction: column;
+}
+
+nav button.landing{
+    margin: 2rem 0;
+    line-height: 3rem;
+    background: none;
+    border: none;
+    min-width: 0;
+    color: var(--grey-text);
+    font-size: 2rem;
+}
+
+nav #donate{
+    color: var(--primary);
+}
+
+.not-selected{
+    display: none;
+}
+
+.selected{
+    display: block;
+    position: relative;
+    bottom: 35rem;
+    text-decoration: none;
+    cursor: initial;
+    font-size: 3.2rem;
+}
+
+.hovered{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/**STYLING FOR MAIN SECTIONS**/
+
+main{
+    grid-area: main;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    color: var(--white-text);
+    background-color: var(--main-background);
+}
+
+main h1{
+    text-align: center;
+    line-height: 4rem;
+    font-size: 4rem;
+}
+
+main div{
+    max-width: 40rem;
+}
+
