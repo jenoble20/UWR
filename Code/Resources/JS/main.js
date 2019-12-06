@@ -1,44 +1,42 @@
-
-$(document).ready(function(){
+$(document).ready(function () {
     initialize();
 
     $("button").hover(
-        function(){
+        function () {
             $(this).toggleClass("hovered");
         },
-        function(){
+        function () {
             $(this).toggleClass("hovered");
         });
 
-    $("#about").click(function(){
+    $("#about").click(function () {
         transitionAside(this);
     });
-    $("#donate").click(function(){
+    $("#donate").click(function () {
         this.style.color = "#707070";
         transitionAside(this);
     });
-    $("#contact").click(function(){
+    $("#contact").click(function () {
         transitionAside(this);
     });
-    $("#gallery").click(function(){
+    $("#gallery").click(function () {
         transitionAside(this);
     });
 
 
     //Loads the initial home page for the user. Calls createAside() and createMain() with 0 as the selector 
-    function initialize(){
+    function initialize() {
         createContent(0);
     }
 
     //Navigates to the About Us section of the site
-    function transitionAside(el){
-        $(".menu-item").not(el).toggleClass(" not-selected ");
+    function transitionAside(el) {
+        $(".menu-item").not(el).toggleClass("not-selected");
         el.classList.add("selected");
         el.classList.remove("hovered");
         el.disabled = true;
+        $("#back-button").css("display", "block");
 
-        $("nav").append("<button id='back'>Back</button>");
-        
     }
 
     /** createAside() & createMain() **
@@ -55,14 +53,15 @@ $(document).ready(function(){
 
      **/
 
-    function createContent(selector){
-        switch (selector){
-            
+    function createContent(selector) {
+        switch (selector) {
+
             case 0:
-             // $("nav").append('<button id="about" class="menu-item">ABOUT US</button><button id="donate" class="menu-item">DONATE NOW</button><button id="contact" class="menu-item">CONTACT US</button><button id="gallery" class="menu-item">PHOTO GALLERY</button>');
-             // $("main").append('<div><h1>Urban Wildlife Rehabilitation</h1></div>');
+                $("nav").append('<button id="about" class="menu-item">ABOUT US</button><button id="donate" class="menu-item">DONATE NOW</button><button id="contact" class="menu-item">CONTACT US</button><button id="gallery" class="menu-item">PHOTO GALLERY</button>');
+                $("main").append('<div><h1>Urban Wildlife Rehabilitation</h1></div>');
                 break;
             case 1:
+
                 break;
             case 2:
                 break;
@@ -82,11 +81,10 @@ $(document).ready(function(){
         }
     }
 
-});//WRAPPER
+}); //WRAPPER
 
 
 /* LANDING PAGE
 $("nav").append('<button id="about" class="menu-item">ABOUT US</button><button id="donate" class="menu-item">DONATE NOW</button><button id="contact" class="menu-item">CONTACT US</button><button id="gallery" class="menu-item">PHOTO GALLERY</button>');
 $("main").append('<div><h1>Urban Wildlife Rehabilitation</h1></div>');
 */
-
